@@ -1,6 +1,7 @@
 </main>
+<title> footer</title>
     <footer>
-        <p>&copy; 2024 Mon Site Web</p>
+        <p>FOOTER</p>
     </footer>
 </body>
 </html>

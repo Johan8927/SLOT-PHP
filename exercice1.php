@@ -1,8 +1,8 @@
 <?php
 //Hello World
  
-$prénom = 'Hello World';
-echo $prénom;
+$nom = 'Hello World';
+echo $nom;
 
 ?>
 

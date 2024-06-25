@@ -1,9 +1,9 @@
 <?php include 'header.php'; ?>
-
+<title>Contact</title>
 <section>
     <h1>Contactez-moi</h1>
     <p>Si vous souhaitez me contacter, veuillez remplir le formulaire ci-dessous :</p>
-    <form action="submit_contact.php" method="post">
+    <form action="submit_contact.php" method="GET">
         <label for="name">Nom:</label>
         <input type="text" id="name" name="name" required><br>
         <label for="email">Email:</label>
