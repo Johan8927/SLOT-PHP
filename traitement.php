@@ -51,6 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
         // Écrire les données dans un fichier (ajouter au fichier s'il existe)
-        file_put_contents('contact.php', $jsonData, FILE_APPEND);
+        file_put_contents('contact_form_submissions.text', $jsonData, FILE_APPEND);
 
 ?>
