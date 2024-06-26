@@ -45,4 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Traitez les données ici
     }
 }
+        // Écrire les données dans un fichier (ajouter au fichier s'il existe)
+        file_put_contents('contact_form_submissions.json', $jsonData, FILE_APPEND);
+
 ?>
