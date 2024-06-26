@@ -1,4 +1,5 @@
 <?php
+// chat gpt mais compris
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $un = $_POST['nbre1'] ?? 0;
         $deux = $_POST['nbre2'] ?? 0;

@@ -24,7 +24,7 @@
 
         <label>Raison du contact:</label><br>
         <input type="radio" name="raison" value="Questions"> Questions<br>
-        <input type="radio" name="raison" value="Autres">Autres<br><br>
+        <input type="radio" name="raison" value="Autre"> Autre<br><br>
         
 
         <label for="message">Message:</label><br>
