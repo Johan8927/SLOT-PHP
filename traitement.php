@@ -7,7 +7,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'] ?? '';
     $raison = $_POST['raison'] ?? '';
     $message = $_POST['message'] ?? '';
-
+    $jsonData = $civilite ;
+    $jsonData .= $nom ;
+    $jsonData .= $prenom;
+    $jsonData .= $email;
+    $jsonData .= $raison;
+    $jsonData .= $message ;
     $errors = [];
 
     // Vérifier que le champ message a un contenu d’au moins 5 lettres
@@ -46,6 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
         // Écrire les données dans un fichier (ajouter au fichier s'il existe)
-        file_put_contents('contact_form_submissions.json', $jsonData, FILE_APPEND);
+        file_put_contents('contact.php', $jsonData, FILE_APPEND);
 
 ?>

@@ -17,7 +17,7 @@ foreach ($fruits as $cle => $value) {
     echo 'La clé ' . $cle . ' contient la valeur ' . $valeur . "\n";
     }
 // crée un tab associatif
-$personne = $array2 ["nom" => 'Bertrand' ,"prénom" => 'Johan',"age"=>'35'];
+$personne = $array2 ["nom" => 'Bertrand ,"prénom" => 'Johan',"age"=>'35'];
 
 //affiche les valeurs du tab
 var_dump
