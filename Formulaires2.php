@@ -11,6 +11,7 @@
     <input type="text" name= "nbre1"> 
     -
     <input type="text" name="nbre2">
-    <input type="submi" value="Soustraire"> 
+    <input type="submit" value="Soustraire"> 
+
 </body>
 </html>
