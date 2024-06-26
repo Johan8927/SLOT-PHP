@@ -1,4 +1,5 @@
 <?php
+session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $civilite = $_POST['civilite'] ?? '';
     $nom = $_POST['nom'] ?? '';
@@ -34,13 +35,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors['prenom'] = "Le prénom est requis.";
     }
 
-    if (empty($errors)) {
+    if (!empty($errors)) {
+        $_SESSION['errors'] = $errors;
+        $_SESSION['old'] = $_POST;
+        header("Location: index.php?page=contact");
+        exit();
+    } else {
         echo "Formulaire soumis avec succès!";
         // Traitez les données ici
-    } else {
-        foreach ($errors as $field => $error) {
-            echo "<p>Erreur dans le champ $field: $error</p>";
-        }
     }
 }
 ?>

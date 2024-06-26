@@ -5,6 +5,12 @@
     <title>Contact Form</title>
 </head>
 <body>
+    <?php
+    session_start();
+    $errors = $_SESSION['errors'] ?? [];
+    $old = $_SESSION['old'] ?? [];
+    session_unset();
+    ?>
     <form action="traitement.php" method="POST">
         <label for="civilite">Civilité:</label>
         <select name="civilite" id="civilite">
