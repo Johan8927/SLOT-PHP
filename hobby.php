@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+
 
 <section>
     <h1>SOFT SKILLS</h1>
