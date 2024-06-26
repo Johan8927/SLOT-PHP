@@ -1,18 +1,46 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    // Récupérer la valeur de la civilité
-    $civilite = isset($_GET['civilite']) ? htmlspecialchars($_GET['civilite']) : 'Non spécifiée';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $civilite = $_POST['civilite'] ?? '';
+    $nom = $_POST['nom'] ?? '';
+    $prenom = $_POST['prenom'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $raison = $_POST['raison'] ?? '';
+    $message = $_POST['message'] ?? '';
 
-    // Récupérer la valeur de la raison du contact
-    if (isset($_GET['raison_contact'])) {
-        $raison_contact = htmlspecialchars($_GET['raison_contact']);
-    } else {
-        $raison_contact = "Aucune raison sélectionnée";
+    $errors = [];
+
+    // Vérifier que le champ message a un contenu d’au moins 5 lettres
+    if (strlen(trim($message)) < 5) {
+        $errors['message'] = "Le message doit contenir au moins 5 lettres.";
     }
 
-    // Afficher les résultats
-    echo "Vous avez sélectionné :<br>";
-    echo "Civilité : " . $civilite . "<br>";
-    echo "Raison du contact : " . $raison_contact;
+    // Vérifier que l’email saisi est dans un format valide
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = "L'email n'est pas dans un format valide.";
+    }
+
+    // Vérifier que la raison de contact est parmi la liste définie
+    $valid_reasons = ["Questions", "Autre"];
+    if (!in_array($raison, $valid_reasons)) {
+        $errors['raison'] = "La raison du contact n'est pas valide.";
+    }
+
+    // Vérifier que le nom et prénom sont remplis
+    if (empty(trim($nom))) {
+        $errors['nom'] = "Le nom est requis.";
+    }
+
+    if (empty(trim($prenom))) {
+        $errors['prenom'] = "Le prénom est requis.";
+    }
+
+    if (empty($errors)) {
+        echo "Formulaire soumis avec succès!";
+        // Traitez les données ici
+    } else {
+        foreach ($errors as $field => $error) {
+            echo "<p>Erreur dans le champ $field: $error</p>";
+        }
+    }
 }
 ?>
