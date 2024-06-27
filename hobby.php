@@ -1,4 +1,4 @@
-
+<title>HOBBY</title>
 
 <section>
     <h1>SOFT SKILLS</h1>
