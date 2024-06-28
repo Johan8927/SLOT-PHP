@@ -17,13 +17,16 @@
 
 
 //Créer une fonction 
-function "direBonjour" ($nom){
+function direBonjour($nom) {
     echo "Bonjour à tous!" ;
-    direBonjour();
 }
+
+direBonjour("martin");
 //Créer une fonction avec plusieurs paramètres :
-function add ($a ,$b){
-    echo ($a + $b) ;
+function addition($a ,$b){
+    echo ($a + 1) * $b ;
 }
+
+addition(1,3);
 
 ?>

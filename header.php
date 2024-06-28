@@ -14,7 +14,6 @@
                 <li><a href="index.php?page=hobby">Hobby</a></li>
                 <li><a href="index.php?page=contact">Contact</a></li>
             </ul>
-    
         </nav>
     </header>
     <main>

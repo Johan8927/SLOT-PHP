@@ -12,7 +12,7 @@ $allowed = [
 "png" => "image/png"
 ];
 }
-$filename =$_FILES["image"]["name"];
+$filename = $_FILES["image"]["name"];
 $file_type = $_FILES["image"]["type"];
 $file_size = $_FILES["image"]["size"];
 
