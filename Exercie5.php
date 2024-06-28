@@ -12,33 +12,43 @@
 
 <?php
 // crée un tab
-$nbre=[1,2,3,4,5,6,7,8,9,10];
+$tab=[1,2,3,4,5,6,7,8,9,10];
+$nbre= 1;
 
-// boucle while  calcule et affiche la somme des nbbres de 1 à 10
+// boucle while  calcule et affiche les nbres de 1 à 10
 while ($nbre<=10){
-$nbre=[$nbre+$nbre++];
+$nbre++;
+echo $nbre . "<br>";
+}
+
+//boucle while calcule la somme des nbre de 1 à 10
+$somme=0;
+while ($somme<=10){
+    $somme+= $nbre;
+  echo $somme;
 }
 
 //Boucle for pour afficher nre 1 à 10
 for($nbre=1,$nbre<=10, $nbre++){
-    echo $nbre ;
+    echo $nbre . "<br>" ;
 }
 
 //multiplie par 5
-for($nbre=1,$nbre<= 10,$nbre * 5){
+for($nbre=1,$nbre<= 10,$nbre ++){
+    $résultat= $nbre * 5
     echo $nbre;
 }
 
 //Boucle foreach
 $fruits = $array2 ['Pomme' . 'Bananne' . 'Orange'];
-foreach ($fruits as $value){
+foreach ($fruits as $fruit){
     echo $value ;
 }
 
 //Boucle do...while
-do {
 $nbre = 1;
-echo $nbre;
-} while($nbre <=10)
+do {
+echo $nbre . "<br>" ;
+} while($nbre <=10);
 
 ?>
