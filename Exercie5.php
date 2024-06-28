@@ -12,7 +12,6 @@
 
 <?php
 // crée un tab
-$tab=[1,2,3,4,5,6,7,8,9,10];
 $nbre= 1;
 
 // boucle while  calcule et affiche les nbres de 1 à 10
@@ -27,8 +26,10 @@ while ($somme<=10){
     $somme+= $nbre;
   echo $somme;
 }
+  $nbre = $nbre++;
 
-//Boucle for pour afficher nre 1 à 10
+
+//Boucle for pour afficher nbre 1 à 10
 for($nbre=1,$nbre<=10, $nbre++){
     echo $nbre . "<br>" ;
 }
@@ -49,6 +50,7 @@ foreach ($fruits as $fruit){
 $nbre = 1;
 do {
 echo $nbre . "<br>" ;
+$nbre++;
 } while($nbre <=10);
 
 ?>
