@@ -24,7 +24,7 @@ function direBonjour($nom) {
 direBonjour("martin");
 //Créer une fonction avec plusieurs paramètres :
 function addition($a ,$b){
-    echo ($a + 1) * $b ;
+    echo ($a + $b );
 }
 
 addition(1,3);
