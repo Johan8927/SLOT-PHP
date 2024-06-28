@@ -12,7 +12,7 @@
 <?php
 
 //crée tableau et affiche le deuxiéme éléments du tab
-$fruits = $array ["Pomme" , "Bananne" , "Orange"];
+$fruits = $array ['Pomme' . 'Bananne' . 'Orange'];
     echo $fruits [1];
 
 //Ajout d'un élément au tab et affiche avec boucle foreach
