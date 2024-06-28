@@ -1,6 +1,8 @@
 <?php
+
 // vérifie method requete
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
 //vérifie la présencedes champs
 if (filter_has_var(INPUT_POST, 'nom') &&
     filter_has_var(INPUT_POST, 'prénom') &&
@@ -14,6 +16,7 @@ $prenom = filter_input (INPUT_POST, "raison", FILTER_SANITIZE_STRING);
 $email = filter_input (INPUT_POST, 'prenom', FILTER_SANITIZE_STRING);
 $email = filter_var($_POST ,'email', FILTER_SANITIZE_EMAIL);
 $message = filter_input (INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+
 //VÉRIF SUPP DE L'Email
 if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
     echo  "adresse e-mail invalide";
@@ -34,7 +37,6 @@ echo "Prénom :" . htmlspecialchars($Prénom) . "<br>";
 echo "raison :" . htmlspecialchars($raison) . "<br>";
 echo "message :" . nl2br(htmlspecialchars($message)) . "<br>";
 echo "email :" . htmlspecialchars($email) . "<br>";
-}quête invalide" ;
 }
 }
 ?>

@@ -12,6 +12,5 @@
     -
     <input type="text" name="nbre2">
     <input type="submit" value="Soustraire"> 
-
 </body>
 </html>

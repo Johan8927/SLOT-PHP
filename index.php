@@ -12,7 +12,8 @@ if ($page == 'home') {
 } elseif ($page == 'contact') {
     include 'contact.php';
 } else {
-// Page par défaut si la valeur de 'page' n'est pas reconnue
+
+    // Page par défaut si la valeur de 'page' n'est pas reconnue
     include 'home.php';
 }
 
